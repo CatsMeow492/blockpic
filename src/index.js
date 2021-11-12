@@ -3,8 +3,13 @@ import ReactDOM from 'react-dom';
 // import './index.css';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
+import FirebaseContext from './context/firebase';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <FirebaseContext.Provider value={{ firebase, FieldValue }}>
+    <App />, 
+    </FirebaseContext.Provider>
+    document.getElementById('root'));
 
 // reportWebVitals();
 
